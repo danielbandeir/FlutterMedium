@@ -1,5 +1,5 @@
 import 'package:fire_analytics/analytics.dart';
-import 'package:fire_analytics/home/home_body.dart';
+import 'package:fire_analytics/home/home_provider.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeBody(),
+      home: HomeProvider(),
     );
   }
 }
