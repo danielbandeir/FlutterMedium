@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:remote_config/home/home_provider.dart';
+import 'package:remote_config/home_without_bloc/home_body.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      //home: HomeBody(),
       home: HomeProvider(),
     );
   }
