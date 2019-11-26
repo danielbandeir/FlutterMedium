@@ -16,3 +16,5 @@ class SendLogEvent extends HomeEvent {
   List<Object> get props => [name, params];
   
 }
+
+class SendLogin extends HomeEvent {}
