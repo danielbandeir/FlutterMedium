@@ -5,6 +5,8 @@ abstract class HomeStates extends Equatable {
   List<Object> get props => [];
 }
 
+class InitialState extends HomeStates {}
+
 class SucessSend extends HomeStates {}
 
 class ErrorSend extends HomeStates {}
