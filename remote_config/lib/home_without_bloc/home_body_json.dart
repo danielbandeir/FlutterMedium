@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -37,8 +39,10 @@ class _HomeBodyJsonState extends State<HomeBodyJson> {
         child: FutureBuilder<RemoteConfig>(
           future: initializeRemoteConfig(),
           builder: (BuildContext context, AsyncSnapshot<RemoteConfig> snapshot) {
+            Map userMap = jsonDecode(snapshot.data.getValue("ExampleJson").asString());
+            HomeRemote home = HomeRemote.fromJson(userMap);
             return Center(
-              child: snapshot.hasData ? Text(snapshot.data.getValue("ExampleJson").asString()) : CircularProgressIndicator(),
+              child: snapshot.hasData ? Text(home.example) : CircularProgressIndicator(),
             );
           },
         ),
