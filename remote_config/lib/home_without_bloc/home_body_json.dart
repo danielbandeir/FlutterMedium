@@ -23,7 +23,8 @@ class _HomeBodyJsonState extends State<HomeBodyJson> {
     await remoteConfig.setDefaults(defaultValues);
 
     /// Fetch params for your app, by default the
-    /// expiration is 12 hours
+    /// expiration is 12 hours, but in this example
+    /// I used 4 seconds
     await remoteConfig.fetch(expiration: Duration(seconds: 4));
 
     /// Active fetch configs
@@ -39,7 +40,9 @@ class _HomeBodyJsonState extends State<HomeBodyJson> {
         child: FutureBuilder<RemoteConfig>(
           future: initializeRemoteConfig(),
           builder: (BuildContext context, AsyncSnapshot<RemoteConfig> snapshot) {
+            /// Pegue a value do json e tranforma em map
             Map userMap = jsonDecode(snapshot.data.getValue("ExampleJson").asString());
+            /// Parse para o model HomeRemote
             HomeRemote home = HomeRemote.fromJson(userMap);
             return Center(
               child: snapshot.hasData ? Text(home.example) : CircularProgressIndicator(),

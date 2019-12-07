@@ -11,6 +11,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeStates> {
   Stream<HomeStates> mapEventToState(HomeEvent event) async* {
     if(event is SendLogEvent) {
       try{
+        print("SendLogEvent");
         await Analytics().analytics.logEvent(name: event.name, parameters: event.params);
         yield SucessSend();
       } catch (e) {
