@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "60620509438",
+    "firebase_url": "https://inapp-a3b27.firebaseio.com",
+    "project_id": "inapp-a3b27",
+    "storage_bucket": "inapp-a3b27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60620509438:android:bd806e44318dfc30a155af",
+        "android_client_info": {
+          "package_name": "com.example.inapp_messaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60620509438-6vct6rsc71541gectc4uv6c55hcu4u7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPx_-6EvS24WVYr_pU1FVR6eNUzqSBXuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "60620509438-6vct6rsc71541gectc4uv6c55hcu4u7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
